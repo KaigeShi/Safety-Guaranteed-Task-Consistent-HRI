@@ -165,7 +165,7 @@ class Controller():
             CMD.publish(q_CMD) #Send calculated command joint velocity to the real UR5e robot
             rate.sleep()
             t = t + dt
-            print([np.linalg.norm(tep),np.linalg.norm(teo)])
+            #print([np.linalg.norm(tep),np.linalg.norm(teo)])
 
         q_CMD.data = np.zeros([6,1],dtype='float64')
         q_CMD.layout.data_offset = q_CMD.layout.data_offset + 1
